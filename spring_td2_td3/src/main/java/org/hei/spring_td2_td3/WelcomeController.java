@@ -23,7 +23,7 @@ public class WelcomeController {
 
     private final List<Student> students = new ArrayList<>();
     @PostMapping("/studentspost")
-    public ResponseEntity<?> createStudent(@RequestBody List<Student> studentList) {
+    public ResponseEntity<List<Student>> createStudent(@RequestBody List<Student> studentList) {
         try {
             students.addAll(studentList);
             return ResponseEntity.status(HttpStatus.CREATED).body(students);
@@ -32,5 +32,19 @@ public class WelcomeController {
                    HttpStatus.INTERNAL_SERVER_ERROR);
         }
         }
+    @GetMapping("/students")
+    public ResponseEntity<?> getStudents(@RequestHeader("Accept") String accept) {
+
+        if ("text/plain".equals(accept)) {
+
+            return ResponseEntity.ok()
+                    .header("Content-Type", "text/plain")
+                    .body(students);
+        } else {
+            return ResponseEntity
+                    .status(HttpStatus.NOT_ACCEPTABLE)
+                    .body("Format non supporté.");
+        }
+    }
     }
 
