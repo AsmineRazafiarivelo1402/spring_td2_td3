@@ -1,4 +1,4 @@
-package org.hei.spring_td2_td3;
+package org.hei.spring_td2_td3.Entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,5 +13,7 @@ public class Student {
     private String firstName;
     private String lastName;
     private int age;
+
+    // Le constucteur  // le Maven...jackson databind mapper les données// serialization <=> desérialization
 
 }

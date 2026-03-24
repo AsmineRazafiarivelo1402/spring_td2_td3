@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e596a61e-45fa-4ed0-aa9e-894940de1d00" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring_td2_td3/src/main/java/org/hei/spring_td2_td3/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_td2_td3/src/main/java/org/hei/spring_td2_td3/WelcomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_td2_td3/src/main/java/org/hei/spring_td2_td3/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_td2_td3/src/main/java/Entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_td2_td3/src/main/java/org/hei/spring_td2_td3/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_td2_td3/src/main/java/Controller/WelcomeController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
