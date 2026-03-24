@@ -1,4 +1,4 @@
-package org.hei.spring_td2_td3;
+package org.hei.spring_td2_td3.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
