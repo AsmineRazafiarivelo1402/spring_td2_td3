@@ -47,4 +47,5 @@ public class WelcomeController {
         }
     }
     }
+    // les élèments qui constituent la requette
 
