@@ -1,40 +1,51 @@
 package org.hei.spring_td2_td3.Controller;
 
+import ch.qos.logback.core.model.processor.DependencyDefinition;
+import org.apache.catalina.valves.rewrite.Substitution;
 import org.hei.spring_td2_td3.Entity.Student;
+import org.hei.spring_td2_td3.Repository.StudentRepository;
+import org.hei.spring_td2_td3.Validator.StudentValidator;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.*;
 
+import java.net.InterfaceAddress;
 import java.util.ArrayList;
 import java.util.List;
-
+@RestController
 public class StudentController {
-    List<Student> students = new ArrayList<>();
-    @PostMapping("/students")
-    public ResponseEntity<List<Student>> createStudent(@RequestBody List<Student> studentList){
-        students.addAll(studentList);
-        return ResponseEntity
-                .status(HttpStatus.CREATED)
-                .header("Content-Type","application/json")
-                .body(students);
-
+  private final StudentValidator studentValidator;
+  private final StudentRepository studentRepository;
+    public StudentController(StudentValidator studentValidator, StudentRepository studentRepository) {
+        this.studentValidator = studentValidator;
+        this.studentRepository = studentRepository;
     }
 
-    @GetMapping("/students")
-    public ResponseEntity<Object> getStudents(@RequestHeader(name = "Accept", required = true) String accept){
-        //Object => return un objet
-        // ? => type inconnu
-        if(!accept.equals("text/plan") || !accept.equals("application/json")){
+    @PostMapping("/students")
+    public ResponseEntity<?> createStudent(@RequestBody List<Student> studentList){
+        try{
+            studentValidator.validStudent(studentList);
+            studentRepository.addAllStudent(studentList);
+            return ResponseEntity
+                    .status(HttpStatus.CREATED)
+                    .header("Content-Type", "application/json")
+                    .body(studentRepository.getStudents());
+
+        } catch (Exception e) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
-                    .body("Format Not Supportde");
+                    .header("Content-Type", "text/plain")
+                    .body(e.getMessage());
         }
-        return ResponseEntity
-                .status(HttpStatus.CREATED)
-                .header("Content-Type","application/json")
-                .body(students);
+
+
+
+
     }
+
+//    S -> Single Responsability => une classe ne doit avoir qu'une seule raison de changer/ une seule responsabilité / un seul but
+//    O -> Open Closed
+//    L -> Substitution de Liskov
+//    I -> InterfaceAddress Segregation
+//    D -> DependencyDefinition Inversion
 }

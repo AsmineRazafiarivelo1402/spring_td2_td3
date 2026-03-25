@@ -1,17 +1,17 @@
 package org.hei.spring_td2_td3.Entity;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
+@ToString
 public class Student {
 
     private String reference;
     private String firstName;
     private String lastName;
-    private int age;
+    private Integer age;
 
 }
 
