@@ -42,10 +42,10 @@ public class StudentController {
 
 
     }
-
-//    S -> Single Responsability => une classe ne doit avoir qu'une seule raison de changer/ une seule responsabilité / un seul but
-//    O -> Open Closed
-//    L -> Substitution de Liskov
-//    I -> InterfaceAddress Segregation
-//    D -> DependencyDefinition Inversion
-}
+//
+////    S -> Single Responsability => une classe ne doit avoir qu'une seule raison de changer/ une seule responsabilité / un seul but
+////    O -> Open Closed
+////    L -> Substitution de Liskov
+////    I -> InterfaceAddress Segregation
+////    D -> DependencyDefinition Inversion
+//}
