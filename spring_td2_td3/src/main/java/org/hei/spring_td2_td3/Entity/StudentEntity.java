@@ -6,7 +6,7 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class Student {
+public class StudentEntity {
 
     private String reference;
     private String firstName;

@@ -1,39 +1,40 @@
 package org.hei.spring_td2_td3.Validator;
 
 
-import org.hei.spring_td2_td3.Entity.Student;
-import org.hei.spring_td2_td3.Repository.StudentRepository;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.hei.spring_td2_td3.Entity.StudentEntity;
+
+import org.hei.spring_td2_td3.exception.BadRequestException;
+import org.hei.spring_td2_td3.service.StudentService;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-@Service
+@Component
 public class StudentValidator {
-    private final StudentRepository studentRepository;
+    private final StudentService studentService;
 
-    public StudentValidator(StudentRepository studentRepository) {
-        this.studentRepository = studentRepository;
+    public StudentValidator(StudentService studentService) {
+        this.studentService = studentService;
     }
 
-    public StudentRepository getStudentRepository() {
-        return studentRepository;
+    public StudentService getStudentRepository() {
+        return studentService;
     }
 
-    public void validStudent(List<Student> newStudents) {
-        for (Student newStudent : newStudents) {
+    public void validStudent(List<StudentEntity> newStudents) throws BadRequestException {
+        for (StudentEntity newStudent : newStudents) {
             if (newStudent.getReference() == null || newStudent.getReference().isBlank()) {
-                throw new RuntimeException("Student reference cannot be null");
+                throw new BadRequestException("Student reference cannot be null");
             }
             if (newStudent.getFirstName() == null || newStudent.getFirstName().isBlank()) {
-                throw new RuntimeException("Student firstName cannot be null");
+                throw new BadRequestException("Student firstName cannot be null");
             }
 
             if (newStudent.getLastName() == null || newStudent.getLastName().isBlank()) {
-                throw new RuntimeException("Student lastName cannot be null");
+                throw new BadRequestException("Student lastName cannot be null");
             }
             if (newStudent.getAge() == null ) {
-                throw new RuntimeException("Student lastName cannot be null");
+                throw new BadRequestException("Student lastName cannot be null");
             }
         }
 

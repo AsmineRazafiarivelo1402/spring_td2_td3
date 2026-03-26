@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e596a61e-45fa-4ed0-aa9e-894940de1d00" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring_td2_td3/src/main/java/org/hei/spring_td2_td3/Controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_td2_td3/src/main/java/org/hei/spring_td2_td3/Controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring_td2_td3/src/main/java/org/hei/spring_td2_td3/Entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_td2_td3/src/main/java/org/hei/spring_td2_td3/Entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_td2_td3/src/main/java/org/hei/spring_td2_td3/Controller/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_td2_td3/src/main/java/org/hei/spring_td2_td3/Controller/WelcomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_td2_td3/src/main/java/org/hei/spring_td2_td3/Entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_td2_td3/src/main/java/org/hei/spring_td2_td3/Entity/StudentEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_td2_td3/src/main/java/org/hei/spring_td2_td3/Repository/StudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_td2_td3/src/main/java/org/hei/spring_td2_td3/Validator/StudentValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_td2_td3/src/main/java/org/hei/spring_td2_td3/Validator/StudentValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +103,9 @@
       <workItem from="1773979012795" duration="309000" />
       <workItem from="1774085379618" duration="35000" />
       <workItem from="1774375534496" duration="5413000" />
-      <workItem from="1774437737403" duration="2643000" />
+      <workItem from="1774437737403" duration="2923000" />
+      <workItem from="1774500351134" duration="864000" />
+      <workItem from="1774509479246" duration="3473000" />
     </task>
     <servers />
   </component>

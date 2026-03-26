@@ -1,13 +1,8 @@
 package org.hei.spring_td2_td3.Controller;
 
-import org.hei.spring_td2_td3.Entity.Student;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 public class WelcomeController {
